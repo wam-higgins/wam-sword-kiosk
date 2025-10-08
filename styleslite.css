@@ -126,3 +126,19 @@ iframe {
 .tg .tg-small-right img {
 	max-height: 30px;
 }
+/* === Horizontal centering without altering table layout === */
+html, body { margin: 0; }
+
+body { 
+  position: relative;          /* establishes containing block */
+}
+
+/* Your table stays the same size/structure; we just center it */
+.tg {
+  margin: 0;                   /* override 0 auto ambiguity */
+  width: 1280px;
+  height: 875px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* precise centering */
+}
