@@ -60,17 +60,5 @@
 
     </tbody>
   </table>
-    <script>
-  const vids = document.querySelectorAll('video');
-  vids.forEach(v => v.addEventListener('play', e => {
-    vids.forEach(o => {
-      if (o !== e.target) {
-        o.pause();
-        o.removeAttribute('src');  // unload previous video
-        o.load();
-              }
-      });
-    }));
-  </script>
 </body>
 </html>
